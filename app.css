@@ -192,3 +192,63 @@
     padding: 0.9rem;
     border-radius: var(--borders-radius);
   }
+
+  /* Basic styles for the card */
+.card {
+  width: 60%;
+  background-color: #f5f5f5;
+  border-radius: var(--borders-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.9rem;
+}
+
+.card-list {
+  display: flex;
+  gap: 1rem;
+  padding: 0.9rem;
+  background: var(--bg-plain-background);
+  border-radius: var(--borders-radius);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-container p {
+  color: var(--font-mid);
+  font-weight: 500;
+}
+
+.btn {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Common button styles */
+.add, .import {
+  padding: 10px 20px;
+  border-radius: var(--borders-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 3D effect - Raised */
+.add {
+  background-color: var(--navbar-gray-100);
+  color: white;
+  border: 0.2rem solid var(--navbar-gray-200);
+}
+
+.import {
+  background-color: none;
+  border: none;
+  color: var(--font-dark);
+}
+
+.image-box {
+  width: 20%;
+  background: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg');
+  background-size: cover;
+}
