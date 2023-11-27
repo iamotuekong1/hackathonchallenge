@@ -248,13 +248,29 @@
     border-radius: 1rem;
     border: solid 0.05rem var(--mid-border);
     box-shadow: 0.1rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.05);;
-    padding: 0.5rem 0;
+    padding: 1rem 2rem;
     position: absolute;
     top: 8.5rem;
     right: 3.2rem;
     overflow: visible;
   }
 
+  .alert-menu .alert-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .alert-menu .alert-title {
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+
+  .alert-menu .menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
   .banner {
     margin-bottom: 1.5rem;
     background: #1a1a1a;
