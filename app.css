@@ -137,6 +137,7 @@
     background: var(--navbar-gray-200);
     border-radius: 0.8rem;
     padding: 0.5rem;
+    cursor: pointer;
   }
 
   .menu .profile {
@@ -165,8 +166,8 @@
   .topbar-menu {
     display: flex;
     opacity: 0;
-    flex-wrap: wrap;
     flex-direction: column;
+    cursor: pointer;
     gap: 1.5rem;
     width: 23%;
     background: var(--bg-plain-white);
@@ -177,12 +178,10 @@
     position: absolute;
     top: 8.5rem;
     right: 3.2rem;
-    transition: opacity 0.5s ease-in;
+    max-height: 0;
+    transition: max-height 0.3s ease-in;
   }
 
-  .topbar-menu.open-menu {
-    opacity: 1;
-  }
   .topbar-menu .profile-container {
     display: flex;
     justify-content: space-between;
@@ -192,7 +191,7 @@
     margin: 0.5rem;
   }
 
-  .topbar-menu .profile {
+  .topbar-menu .profiles {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -243,9 +242,9 @@
   }
 
   .alert-menu {
-    display: none;
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
+    opacity: 0;
     gap: 1.5rem;
     width: 30%;
     background: var(--bg-plain-white);
@@ -256,7 +255,13 @@
     position: absolute;
     top: 8.5rem;
     right: 3.2rem;
-    overflow: visible;
+    max-height: 0;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .open-menu {
+    opacity: 1;
+    max-height: 60rem;
   }
 
   .alert-menu .alert-container {
