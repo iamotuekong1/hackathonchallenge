@@ -19,7 +19,10 @@
     --bg-plain-background: #f1f1f1;
     --profile-text-color: rgba(0, 0, 0, 0.400000006);
     --profile-bg-color: #36fba1;
+    --mid-border: #dbdada;
+    --thin-border: #f1f1f1;
     --borders-radius: 1rem;
+    --mobile-borders-radius: 0.5rem;
 }
   
 /* CSS Reset */
@@ -62,9 +65,9 @@
     font-size: 16px;
     line-height: 1.6;
     width: 100%;
-    position: relative;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     background-color: var(--bg-plain-background);
   }
@@ -92,14 +95,17 @@
     background-color: #1a1a1a;
   }
 
+  .mobile-logo {
+    display: none;
+  }
   /* Style for the search container */
-.search-container {
+  .search-container {
     position: relative;
     width: 35% /* Adjust width as needed */
   }
 
 /* Style for the search box */
-.search-box {
+  .search-box {
     width: 100%;
     height: 4.5rem;
     padding: 1.5rem 5rem ;
@@ -149,11 +155,85 @@
 
   .menu .profileinitials {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--profile-text-color);
     background: var(--profile-bg-color);
     padding: 0.45rem;
     border-radius: 0.7rem;
+  }
+
+  .topbar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50rem;
+    background: var(--bg-plain-white);
+    border-radius: 1rem;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 8.5rem;
+    right: 3.2rem;
+    overflow: visible;
+  }
+
+  .topbar-menu .profile-container {
+    display: flex;
+    justify-content: space-between;
+    background: var(--bg-plain-background);
+    border-radius: var(--borders-radius);
+    padding: 1rem auto;
+    margin: 0.5rem;
+  }
+
+  .topbar-menu .profile {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .topbar-menu .profilename {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--font-dark);
+  }
+
+  .topbar-menu .profileinitials {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--profile-text-color);
+    background: var(--profile-bg-color);
+    padding: 0.6rem;
+    border-radius: 0.7rem;
+  }
+
+  .topbar-menu .stores {
+    margin: 0 0.5rem 1rem;
+    padding: auto 1rem;
+  }
+
+  .topbar-menu .heading {
+    border-bottom: 0.2rem solid var(--mid-border);
+  }
+
+  .topbar-menu .bottom {
+    border-bottom: 0.2rem solid var(--thin-border);
+  }
+
+  .stores .stores-link {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: auto 1rem;
+  }
+
+  .topbar-menu .text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--font-dark);
+    margin-left: 1rem;
   }
 
   .banner {
@@ -251,4 +331,132 @@
   width: 20%;
   background: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg');
   background-size: cover;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  /* Apply styles for screens smaller than 768px (typically mobile screens) */
+  .header {
+    margin-bottom: 2rem;
+    padding: 3.5rem 1.2rem;
+    width: 100%;
+  }
+
+
+  .header-container {
+    gap: 1rem;
+    padding: 4rem 0rem;
+  }
+  .desktop-logo {
+    display: none; /* Hide the desktop logo */
+  }
+
+  .mobile-logo {
+    display: block; /* Display the mobile SVG */
+    /* Add any specific styles for the mobile SVG here */
+  }
+
+  .search-container {
+    position: relative;
+    width: 70% /* Adjust width as needed */
+  }
+
+  .menu .notification, .menu .profile {
+    background: none;
+    padding: 0;
+  }
+
+  .menu .profile {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2rem;
+    align-items: center;
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+  }
+
+  .menu .profilename {
+    display: none;
+
+  }
+
+  .menu .profileinitials {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--profile-text-color);
+    background: var(--profile-bg-color);
+    padding: 0.45rem;
+    border-radius: 0.7rem;
+  }
+
+  .banner {
+    margin-bottom: 1.5rem;
+    background: #1a1a1a;
+    width: 100%;
+    border-radius: 0;
+    height: 7rem;
+    padding: auto 1rem;
+    height: max-content;
+  }
+
+  .banner .subscription .plan p {
+    color: var(--font-light);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .banner .subscription .plan .btn-plan {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .banner .subscription .plan .btn-plan a {
+    background: var(--bg-plain-background);
+    color: var(--font-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--mobile-borders-radius);
+    height: 3rem;
+    margin: auto;
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 0;
+    padding: 0.9rem;
+  }
+
+  .card-list {
+    padding: 0.5rem;
+  }
+  
+  .card-container {
+    gap: 0.5rem;
+  }
+  
+  .card-container p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .btn {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Common button styles */
+  .add, .import {
+    padding: 0.5rem 1rem;
+    border-radius: var(--mobile-borders-radius);
+  }
+  
+  /* 3D effect - Raised */
+  .add {
+    border: 0.1rem solid var(--navbar-gray-200);
+  }
+  
+  .image-box {
+    width: 40%;
+  }
 }
