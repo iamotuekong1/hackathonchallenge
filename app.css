@@ -163,7 +163,7 @@
   }
 
   .topbar-menu {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 1.5rem;
