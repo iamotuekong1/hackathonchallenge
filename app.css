@@ -163,7 +163,8 @@
   }
 
   .topbar-menu {
-    display: none;
+    display: flex;
+    opacity: 0;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 1.5rem;
@@ -176,9 +177,12 @@
     position: absolute;
     top: 8.5rem;
     right: 3.2rem;
-    overflow: visible;
+    transition: opacity 0.5s ease-in;
   }
 
+  .topbar-menu.open-menu {
+    opacity: 1;
+  }
   .topbar-menu .profile-container {
     display: flex;
     justify-content: space-between;
@@ -239,11 +243,11 @@
   }
 
   .alert-menu {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 1.5rem;
-    width: 28%;
+    width: 30%;
     background: var(--bg-plain-white);
     border-radius: 1rem;
     border: solid 0.05rem var(--mid-border);
@@ -262,7 +266,7 @@
   }
 
   .alert-menu .alert-title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.7rem;
   }
 
@@ -270,6 +274,12 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+
+  .alert-menu .alert-container2 {
+    background: var(--bg-plain-background);
+    padding: 2rem;
+    font-size: 1.3rem;
   }
   .banner {
     margin-bottom: 1.5rem;
@@ -311,18 +321,50 @@
   /* Basic styles for the card */
 .card {
   width: 50%;
-  background-color: #f5f5f5;
+  background-color: #fff;
   border-radius: var(--borders-radius);
+  border: solid 0.05rem var(--mid-border);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 0.9rem;
+}
+
+.card .setup-guide {
+  margin: 2rem 2rem;
+}
+
+.card .progress-steps {
+  margin: 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.card .progress-bar-container {
+  margin-left: 1rem;
+  width: 10rem;
+  height: 0.5rem;
+  background: var(--bg-plain-background);
+  border-radius: var(--mobile-borders-radius);
+}
+
+.card .progress-bar {
+  background: var(--navbar-gray-200);
+  width: 0;
+  height: 100%;
 }
 
 .card-list {
   display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
   gap: 1rem;
-  padding: 0.9rem;
+  margin: 0.5rem;
+  padding: 1rem 2rem 1rem 1rem;
   background: var(--bg-plain-background);
   border-radius: var(--borders-radius);
+}
+
+.card-list .sub-card-list {
+  display: flex;
+  gap: 1rem;
 }
 
 .card-container {
@@ -336,6 +378,10 @@
   font-weight: 500;
 }
 
+.card-container a {
+  color: var(--states-focused);
+}
+
 .btn {
   text-align: left;
   margin-bottom: 1rem;
@@ -343,15 +389,17 @@
 
 /* Common button styles */
 .add, .import {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
   border-radius: var(--borders-radius);
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 /* 3D effect - Raised */
 .add {
-  background-color: var(--navbar-gray-100);
+  background-color: var(--navbar-gray-200);
   color: white;
   border: 0.2rem solid var(--navbar-gray-200);
 }
@@ -362,10 +410,16 @@
   color: var(--font-dark);
 }
 
-.image-box {
+.card-list .image-box {
+  margin: auto;
+  border-radius: var(--mobile-borders-radius);
   width: 20%;
-  background: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg');
-  background-size: cover;
+  height: 10rem;
+}
+
+.card-list img {
+  width: 100%;
+
 }
 
 

@@ -73,7 +73,7 @@
       </a>
       </div>
 
-      <div class="topbar-menu">
+      <div class="topbar-menu" id="topbar-menu">
         <div class="profile-container">
           <a href="https://admin.shopify.com" class="profile">
             <div class="profileinitials">DC</div>
@@ -145,11 +145,8 @@
               <path d="M5.5 9.25C5.08579 9.25 4.75 9.58579 4.75 10C4.75 10.4142 5.08579 10.75 5.5 10.75H14.5C14.9142 10.75 15.25 10.4142 15.25 10C15.25 9.58579 14.9142 9.25 14.5 9.25H5.5Z" fill="#616161"/>
             </svg>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="#616161"></circle>
-              <path
-                d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                fill="#616161"
-              ></path>
+              <circle cx="12" cy="12" r="10" fill="none" stroke="#616161" stroke-width="2"></circle>
+              <path d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z" fill="#616161" stroke-width="4"/>
             </svg>
           </div>          
         </div>
@@ -177,10 +174,10 @@
               </svg>            
           </i>
         </div>
-        <a href="https://admin.shopify.com" class="profile">
+        <div class="profile" onclick="toggleTopbarMenu()">
           <div class="profilename">Davii Collections</div>
           <div class="profileinitials">DC</div>
-        </a>
+        </div>
       </div>
       </div>
     </section>
@@ -203,19 +200,33 @@
 
     <!-- card section -->
     <section class="card">
+      <div class="setup-guide">
+        <h3>Setup guide</h3>
+        <p class="use-this-personalized-guide-to-get-your-store-up-and-running-Y41">Use this personalized guide to get your store up and running.</p>
+      </div>
+      <div class="progress-steps">
+        <p class="progress-text">0 / 5 completed</p>
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
       <div class="card-list card-list1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-        </svg>
-        <div class="card-container">
-          <h3>Add your first product</h3>
-          <p>Write a description, add photos, and set pricing for the products you plan to sell. <a href="#">Learn more</a></p>
-          <div class="btn">
-            <button class="add">Add Product</button>
-            <button class="import">Import Product</button>
+        <div class="sub-card-list">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+          </svg>
+          <div class="card-container">
+            <h3>Add your first product</h3>
+            <p>Write a description, add photos, and set pricing for the products you plan to sell. <a href="#">Learn more</a></p>
+            <div class="btn">
+              <button class="add">Add Product</button>
+              <button class="import">Import Product</button>
+            </div>
           </div>
         </div>
-        <div class="image-box"></div>
+        <div class="image-box">
+          <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
+        </div>
       </div>
     </section>
     

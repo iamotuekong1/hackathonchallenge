@@ -12,3 +12,9 @@ svgIcon.addEventListener('click', function () {
         banner.remove();
     }
 });
+
+let topbarMenu = document.getElementById("topbar-menu");
+
+function toggleTopbarMenu() {
+    topbarMenu.classList.toggle("open-menu");
+}
