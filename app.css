@@ -180,6 +180,7 @@
     right: 3.2rem;
     max-height: 0;
     transition: max-height 0.3s ease-in;
+    overflow: hidden;
   }
 
   .topbar-menu .profile-container {
@@ -337,6 +338,10 @@
   justify-content: space-between;
 }
 
+.card-head svg {
+  margin: 1.5rem 2rem;
+}
+
 .card .setup-guide {
   margin: 2rem 2rem;
 }
@@ -375,6 +380,10 @@
 .card-list .sub-card-list {
   display: flex;
   gap: 1rem;
+}
+
+.card-list svg {
+  flex-shrink: 0;
 }
 
 .card-container {
@@ -421,6 +430,7 @@
 }
 
 .card-list .image-box {
+  flex-shrink: 0;
   margin: auto;
   border-radius: var(--mobile-borders-radius);
   width: 20%;
