@@ -1,65 +1,17 @@
-// // Get the SVG element
-// const svgIcon = document.querySelector('#banner svg');
-
-// // Add a click event listener to the SVG icon
-// svgIcon.addEventListener('click', function () {
-//     // Get the section to remove
-//     const banner = document.querySelector('#banner');
-
-//     // Check if the section exists
-//     if (banner) {
-//         // Remove the section
-//         banner.remove();
-//     }
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     var notification = document.querySelector('.notification');
-//     var alertMenu = document.querySelector('.alert-menu');
-//     var profile = document.querySelector('.profile');
-//     var topbarMenu = document.querySelector('.topbar-menu');
-
-//     function toggleAlertMenu() {
-//         alertMenu.classList.toggle('open-menu');
-//     }
-
-//     function toggleTopbarMenu() {
-//         topbarMenu.classList.toggle('open-menu');
-//     }
-
-//     function handleDocumentClick(event) {
-//         if (event.target !== notification) {
-//             alertMenu.classList.remove('open-menu');
-//         }
-
-//         if (event.target !== profile) {
-//             topbarMenu.classList.remove('open-menu');
-//         }
-//     }
-
-//     notification.addEventListener('click', function(event) {
-//         event.stopPropagation();
-//         toggleAlertMenu();
-//         topbarMenu.classList.remove('open-menu');
-//     });
-
-//     profile.addEventListener('click', function(event) {
-//         event.stopPropagation();
-//         toggleTopbarMenu();
-//         alertMenu.classList.remove('open-menu');
-//     });
-
-//     document.addEventListener('click', handleDocumentClick);
-// });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     var notification = document.querySelector('.notification');
     var alertMenu = document.querySelector('.alert-menu');
     var profile = document.querySelector('.profile');
     var topbarMenu = document.querySelector('.topbar-menu');
-    const svgIcon = document.querySelector('#banner svg');
+    const svgIcon = document.querySelector('#svgIcon');
     const banner = document.querySelector('#banner');
+    const checkbox = document.getElementById('svgToggle');
+    const cardListContainer = document.querySelector('.card-list-container');
+    const radiobutton = document.querySelectorAll('.radio-button');
+    const radiobuttons = document.querySelectorAll('.radio-button');
+    const icons = document.querySelectorAll('.icon');
+    const progressBar = document.querySelector('.progress-bar');
+    const progressText = document.querySelector('.progress-text');
 
     function toggleAlertMenu() {
         alertMenu.classList.toggle('open-menu');
@@ -77,13 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target !== profile) {
             topbarMenu.classList.remove('open-menu');
         }
-
-        if (banner) {
-            // Remove the section
-            banner.remove();
-        }
     }
 
+    function handleSvgClick() {
+            banner.remove();
+    }
+    
     notification.addEventListener('click', function(event) {
         event.stopPropagation();
         toggleAlertMenu();
@@ -96,11 +47,49 @@ document.addEventListener('DOMContentLoaded', function() {
         alertMenu.classList.remove('open-menu');
     });
 
-    svgIcon.addEventListener('click', function() {
-        event.stopPropagation();
-        banner.remove();
+    svgIcon.addEventListener('click', handleSvgClick);
+
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          cardListContainer.style.maxHeight = '1000px'; 
+        } else {
+          cardListContainer.style.maxHeight = '0';
+        }
+      });
+
+    radiobuttons.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            const subList = this.closest('.sub-list');
+            const allSubLists = document.querySelectorAll('.sub-list');
+
+            if (this.checked) {
+                allSubLists.forEach(function(list) {
+                    list.style.background = '#ffffff';
+                });
+                subList.style.background = '#f1f1f1'; 
+            }
+        });
     });
 
+
     document.addEventListener('click', handleDocumentClick);
+
+    let step = 0;
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+        if (icon.classList.contains('active')) {
+            icon.classList.remove('active');
+            step--;
+        } else {
+            icon.classList.add('active');
+            step++;
+        }
+
+        const percentage = (step / icons.length) * 100;
+        progressBar.style.width = percentage + '%';
+        progressText.textContent = `${step} / ${icons.length} completed`;
+        });
+    });
 
 });

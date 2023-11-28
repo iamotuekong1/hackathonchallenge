@@ -189,9 +189,12 @@
           <p>Extend your trial for $1/month for 3 months on select plans.</p>
           <div class="btn-plan">
             <a href="https://shopify.com/pricing" target="_blank">Select Plan</a>
-            <svg width="21" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z" fill="#fff"/>
-            </svg>
+            <div id="svgIcon">
+              <svg width="30" height="29
+              " viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z" fill="#ebebeb"/>
+              </svg>
+            </div>
               
           </div>
         </div>
@@ -217,103 +220,139 @@
             
         </div>
 
-        <svg width="41" height="30" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z" fill="#616161"/>
-      </svg>
+        <input type="checkbox" id="svgToggle" class="toggle-checkbox">
 
+        <label for="svgToggle">
+          <svg id="toggleSVGdown" width="41" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="path1" fill-rule="evenodd" clip-rule="evenodd" d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z" fill="black"/>
+          </svg>
+          <svg id="toggleSVGup" width="41" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="path1" fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="black"/>
+          </svg>
+        </label>
+          
       </div>
 
-      <div>
-        <div class="card-list card-list1">
-          <div class="sub-card-list">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-            </svg>
-            <div class="card-container">
+      <div class="card-list-container">
+        
+        <ul class="card-list1">
+          <li class="sub-list">
+            
+            <label for="first" class="sub-card-head">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon styled-icon" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="12" />
+              </svg>              
               <h3>Customize your online store</h3>
-              <p>Choose a theme and add your logo, colours, and images to reflect your brand. <a href="#">Learn more</a></p>
-              <div class="btn">
-                <button class="add">Customize theme</button>
+            </label>
+            <input class="radio-button" type="radio" name="accordion" id="first" checked>
+            <div class="card-content">
+              <div class="card-content-text-btn">
+                <p>Choose a theme and add your logo, colours, and images to reflect your brand. <a href="#">Learn more</a></p>
+                <div class="btn">
+                  <button class="add">Customize theme</button>
+                </div>
+              </div>
+              <div class="image-box">
+                <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="">
               </div>
             </div>
-          </div>
-          <div class="image-box">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
-          </div>
-        </div>
 
-        <div class="card-list card-list1">
-          <div class="sub-card-list">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-            </svg>
-            <div class="card-container">
+          </li>
+
+          <li class="sub-list">
+            
+            <label for="second" class="sub-card-head">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon styled-icon" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="12" />
+              </svg>              
               <h3>Add your first product</h3>
-              <p>Write a description, add photos, and set pricing for the products you plan to sell. <a href="#">Learn more</a></p>
-              <div class="btn">
-                <button class="add">Add Product</button>
+            </label>
+            <input class="radio-button" type="radio" name="accordion" id="second">
+            <div class="card-content">
+              <div class="card-content-text-btn">
+                <p>Write a description, add photos, and set pricing for the products you plan to sell. <a href="#">Learn more</a></p>
+                <div class="btn">
+                  <button class="add">Add Product</button>
                 <button class="import">Import Product</button>
+                </div>
+              </div>
+              <div class="image-box">
+                <img src="https://crushingit.tech/hackathon-assets/product.png" alt="">
               </div>
             </div>
-          </div>
-          <div class="image-box">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
-          </div>
-        </div>
-        
-        <div class="card-list card-list1">
-          <div class="sub-card-list">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-            </svg>
-            <div class="card-container">
-              <h3>Add a custom domain</h3>
-              <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. <a href="#">Learn more</a></p>
-              <div class="btn">
-                <button class="add">Add domain</button>
-              </div>
-            </div>
-          </div>
-          <div class="image-box">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
-          </div>
-        </div>
-        
-        <div class="card-list card-list1">
-          <div class="sub-card-list">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-            </svg>
-            <div class="card-container">
-              <h3>Name your store</h3>
-              <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <a href="#">Learn more</a></p>
-              <div class="btn">
-                <button class="add">Name store</button>
-              </div>
-            </div>
-          </div>
-          <div class="image-box">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
-          </div>
-        </div>
 
-        <div class="card-list card-list1">
-          <div class="sub-card-list">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="12" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-            </svg>
-            <div class="card-container">
-              <h3>Set up a payment provider</h3>
-              <p>Choose a payment provider to start accepting payments. You'll need to create an account ith the payment provider and set it up with you Shopify store. <a href="#">Learn more</a></p>
-              <div class="btn">
-                <button class="add">Set up payment</button>
+          </li>
+
+          <li class="sub-list">
+            
+            <label for="third" class="sub-card-head">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon styled-icon" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="12" />
+              </svg>              
+              <h3>Add a custom domain</h3>
+            </label>
+            <input class="radio-button" type="radio" name="accordion" id="third">
+            <div class="card-content">
+              <div class="card-content-text-btn">
+                <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store. <a href="#">Learn more</a></p>
+                <div class="btn">
+                  <button class="add">Add domain</button>
+                </div>
+              </div>
+              <div class="image-box">
+                <img src="https://crushingit.tech/hackathon-assets/website.png" alt="">
               </div>
             </div>
-          </div>
-          <div class="image-box">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="">
-          </div>
-        </div>
+
+          </li>
+
+          <li class="sub-list">
+            
+            <label for="fourth" class="sub-card-head">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon styled-icon" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="12" />
+              </svg>              
+              <h3>Name your store</h3>
+            </label>
+            <input class="radio-button" type="radio" name="accordion" id="fourth">
+            <div class="card-content">
+              <div class="card-content-text-btn">
+                <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <a href="#">Learn more</a></p>
+                <div class="btn">
+                  <button class="add">Name store</button>
+                </div>
+              </div>
+              <div class="image-box">
+                <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="">
+              </div>
+            </div>
+
+          </li>
+
+          <li class="sub-list">
+            
+            <label for="fifth" class="sub-card-head">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon styled-icon" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="12" />
+              </svg>              
+              <h3>Set up a payment provider</h3>
+            </label>
+            <input class="radio-button" type="radio" name="accordion" id="fifth">
+            <div class="card-content">
+              <div class="card-content-text-btn">
+                <p>Choose a payment provider to start accepting payments. You'll need to create an account with the payment provider and set it up with you Shopify store. <a href="#">Learn more</a></p>
+                <div class="btn">
+                  <button class="add">Name store</button>
+                </div>
+              </div>
+              <div class="image-box">
+                <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="">
+              </div>
+            </div>
+
+          </li>
+
+        </ul> 
         
       </div>
 
