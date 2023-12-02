@@ -92,4 +92,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    
+
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const circle = document.getElementById('circle');
+    const tick = document.getElementById('tick');
+
+    // Function to set initial transparency
+    const setInitialTransparency = () => {
+        tick.style.fillOpacity = '0'; // Set fill opacity to 0 for 100% transparency
+    };
+
+    const done = function() {
+        if (circle.classList.contains('clicked')) {
+            circle.classList.remove('clicked');
+            circle.classList.add('unclicked');
+        } else {
+            circle.classList.remove('unclicked');
+            circle.classList.add('clicked');
+        }
+    }
+
+    const toggleTickFill = function() {
+        if (tick.classList.contains('ticked')) {
+            tick.classList.remove('ticked');
+            tick.classList.add('unticked');
+        } else {
+            tick.classList.remove('unticked');
+            tick.classList.add('ticked');
+        }
+    }
+
+    circle.addEventListener('click', done);
+    tick.addEventListener('click', toggleTickFill);
+
+    // Call the function to set initial transparency on window load
+    setInitialTransparency();
 });
